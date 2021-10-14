@@ -49,7 +49,7 @@ class Clase {
 // CLASE "CLASE" 
 
 class Alumno {
-    constructor ({nombre, promedio}) {
+    constructor (nombre, promedio) {
         this.nombre = nombre;
         this.promedio = promedio;     
     }
@@ -108,11 +108,11 @@ const procesarAlumnos = ( obj )=> {
                 }
 
             }
-            const alumno = new Alumno ({nombreDelAlumno, promedio})
-            listaAlumnos.push(alumno)
+            const alumno = new Alumno (nombreDelAlumno, promedio)
+            listaAlumnos.push(alumno)            
             alert(`El promedio de ${alumno.nombre} es de ${alumno.promedio}`)            
         }
-        
+        console.log(listaAlumnos)
         anunciarMejorAlumno(alumnoMejorPromedio, mejorPromedio)
         
 
@@ -122,14 +122,14 @@ const procesarAlumnos = ( obj )=> {
     
 }
 
-for (let alumno of listaAlumnos) {
-let contenedor = document.createElement('div'); 
+const printear = () => {
+    for (let alumno of listaAlumnos) {
+let contenedor = document.createElement("div"); 
 contenedor.innerHTML = `<p>Alumno: ${alumno.nombre}</p>
-                <p>Promedio: ${alumno.promedio}</p>`;
+                <p>Promedio: ${alumno.promedio}</p>`
 document.body.appendChild(contenedor);
 }
-
-
+}
 
 
 
@@ -143,3 +143,4 @@ clase3020.comenzarClase();
 procesarAlumnos(clase3020);
 ordenarListaAlumnos(listaAlumnos);
 mostrarAlumnos(listaAlumnos);
+printear();
