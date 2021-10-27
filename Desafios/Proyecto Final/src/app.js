@@ -1,3 +1,9 @@
+// Ready el DOM
+
+$(() => {
+    console.log('El DOM esta listo');
+   });
+
 // CLASES
 
 // CLASE "CLASE" 
@@ -39,7 +45,7 @@ const procesarAlumnos = ( obj )=> {
         console.log("No se puede realizar el procesamiento ya que la clase no ha comenzado (Clase.comenzada === false)")
     }else{
         for (let i = 0; i < obj.cantidadAlumnos; i++) {   
-            let nombreDelAlumno = prompt(`Ingrese el nombre del alumno. `) 
+            let nombreDelAlumno = prompt(`Ingrese el nombre del alumno. `)             
             let acumulador = 0;  
             let promedio = 0;      
             for (let y = 0; y < obj.examenes ; y++)   {
@@ -68,28 +74,24 @@ const procesarAlumnos = ( obj )=> {
 
 const imprimirAlumnos = () => {
     for (let alumno of listaAlumnos) {
-let contenedor = document.createElement("div"); 
-contenedor.innerHTML = `<p><b>Alumno</b>: ${alumno.nombre}</p>
-                     <p><b>Promedio</b>: ${alumno.promedio}</p>`
-document.body.appendChild(contenedor);
+$('body').append(`<p><b>Alumno</b>: ${alumno.nombre}</p>
+<p><b>Promedio</b>: ${alumno.promedio}</p>`); 
 }
 }
 
 
 
-const validarFormulario = (e) => {
-
-    e.preventDefault(); 
+const validarFormulario = (e) => {    
    
     alert("Clase Creada");
    
-    let nombreProfesor = formulario.children[1].value;
+    let nombreProfesor = formulario.find('input[name="ProfesorTitular"]').val();    
     
-    let camada = formulario.children[3].value; 
+    let camada = formulario.find('input[name="Camada"]').val();
 
-    let cantidadDeAlumnos = formulario.children[5].value;
+    let cantidadDeAlumnos = formulario.find('input[name="CantidadDeAlumnos"]').val();
 
-    let examenesPorAlumno = formulario.children[7].value;
+    let examenesPorAlumno = formulario.find('input[name="ExamenesPorAlumno"]').val();
     
     let clase = new Clase (cantidadDeAlumnos, examenesPorAlumno, camada, nombreProfesor) 
     
@@ -97,9 +99,9 @@ const validarFormulario = (e) => {
 
     printear(clase)
 
-    let botonProceso = document.getElementById("procesar-alumnos")
+    let botonProceso = $("#procesar-alumnos")
 
-    botonProceso.addEventListener("click", function(){
+    botonProceso.on("click", function(){
         procesarAlumnos(clase)
         imprimirAlumnos();
         
@@ -108,20 +110,21 @@ const validarFormulario = (e) => {
 }
 
 const printear = (clase) => {    
-        let contenedor = document.createElement("div"); 
-        contenedor.innerHTML = `<h2>Profesor: ${clase.profesorTitular}</h2>
-                                <p><b>Camada</b>: ${clase.camada}</p>
-                                <p><b>Cantidad de Alumnos</b>: ${clase.cantidadAlumnos}</p>
-                                <p><b>Cantidad de Examenes Por Alumno</b>: ${clase.examenes}</p>
-                                <button id="procesar-alumnos"> Comenzar el procesado de alumnos</button>`
-        document.body.appendChild(contenedor);    
+        $("body").append(`<div><h2>Profesor: ${clase.profesorTitular}</h2>
+        <p><b>Camada</b>: ${clase.camada}</p>
+        <p><b>Cantidad de Alumnos</b>: ${clase.cantidadAlumnos}</p>
+        <p><b>Cantidad de Examenes Por Alumno</b>: ${clase.examenes}</p>
+        <button id="procesar-alumnos"> Comenzar el procesado de alumnos</button></div>`);          
 }
 
-let formulario = document.getElementById ("formulario-clase");
+let formulario = $("#formulario-clase");
 
-formulario.addEventListener("submit", validarFormulario);
+formulario.on("submit", function(e){
+    e.preventDefault();
+    validarFormulario();
+});
 
-let formularioProceso = document.getElementById("formulario-proceso")
+let formularioProceso = $("#formulario-proceso")
 
 
 // PROMEDIO - Funcion auxiliar de procesarAlumnos
@@ -133,7 +136,7 @@ const sacarPromedio = (acumulador, examenes ) => {
 // ANUNCIO MEJOR ALUMNO - Funcion auxiliar de procesarAlumnos
 
 const anunciarMejorAlumno = (alumno, promedio) => {
-    console.log(`El alumno con el mejor promedio es ${alumno} con ${promedio}`)
+    $('body').append(`<h3>El alumno con el mejor promedio es ${alumno} con ${promedio}</h3>`)
 }
 
 // ORDENAR ARRAY POR PROMEDIOS DE MENOR A MAYOR
