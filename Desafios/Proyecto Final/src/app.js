@@ -157,6 +157,9 @@ const mostrarAlumnos = (alumnos) => {
 
 let listaAlumnos = [];
 
+$('#header').fadeIn("slow", ()=>{
+    $('#formulario-clase').slideDown("slow")
+});
 
 
 
