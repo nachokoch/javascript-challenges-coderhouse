@@ -1,0 +1,839 @@
+{
+    "status": 200,
+    "warning": "These results do not include state and province holidays. For more information, please visit https://holidayapi.com/docs",
+    "requests": {
+    "used": 3,
+    "available": 9997,
+    "resets": "2021-12-01 00:00:00"
+    },
+    "holidays": [
+    {
+    "name": "New Year's Day",
+    "date": "2020-01-01",
+    "observed": "2020-01-01",
+    "public": true,
+    "country": "AR",
+    "uuid": "4fa82df9-ae21-4984-8936-c031bd64fa47",
+    "weekday": {
+    "date": {
+    "name": "Wednesday",
+    "numeric": "3"
+    },
+    "observed": {
+    "name": "Wednesday",
+    "numeric": "3"
+    }
+    }
+    },
+    {
+    "name": "Shrove Monday",
+    "date": "2020-02-24",
+    "observed": "2020-02-24",
+    "public": true,
+    "country": "AR",
+    "uuid": "eec46f77-3373-4397-8ba3-21d312208594",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Shrove Tuesday",
+    "date": "2020-02-25",
+    "observed": "2020-02-25",
+    "public": true,
+    "country": "AR",
+    "uuid": "0e60fdb3-cb35-4a1b-b6a2-683266f8b9ce",
+    "weekday": {
+    "date": {
+    "name": "Tuesday",
+    "numeric": "2"
+    },
+    "observed": {
+    "name": "Tuesday",
+    "numeric": "2"
+    }
+    }
+    },
+    {
+    "name": "March Equinox",
+    "date": "2020-03-20",
+    "observed": "2020-03-20",
+    "public": false,
+    "country": "AR",
+    "uuid": "22a5dcb4-bd41-406e-bf09-ae33aabc40e7",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Day of Remembrance for Truth and Justice Bridge Holiday",
+    "date": "2020-03-23",
+    "observed": "2020-03-23",
+    "public": true,
+    "country": "AR",
+    "uuid": "9dd6d608-bff7-4e68-8b3d-98e5d533dd43",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Day of Remembrance for Truth and Justice",
+    "date": "2020-03-24",
+    "observed": "2020-03-24",
+    "public": true,
+    "country": "AR",
+    "uuid": "69f01bb7-e243-4e03-b81c-096db4d497a7",
+    "weekday": {
+    "date": {
+    "name": "Tuesday",
+    "numeric": "2"
+    },
+    "observed": {
+    "name": "Tuesday",
+    "numeric": "2"
+    }
+    }
+    },
+    {
+    "name": "Day of the Veterans and Fallen of the Falklands War",
+    "date": "2020-04-02",
+    "observed": "2020-04-02",
+    "public": true,
+    "country": "AR",
+    "uuid": "f8933cd8-4a19-4921-acb2-3c6eb5a99883",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Malvinas Day",
+    "date": "2020-04-02",
+    "observed": "2020-04-02",
+    "public": true,
+    "country": "AR",
+    "uuid": "9fd531bd-5020-4a1f-907f-d1d702f49a5e",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Maundy Thursday",
+    "date": "2020-04-09",
+    "observed": "2020-04-09",
+    "public": false,
+    "country": "AR",
+    "uuid": "92a6781b-6285-432d-b45f-8736e30d358b",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Passover",
+    "date": "2020-04-09",
+    "observed": "2020-04-09",
+    "public": false,
+    "country": "AR",
+    "uuid": "84515054-591e-4d88-a636-3d5f98a07422",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Good Friday",
+    "date": "2020-04-10",
+    "observed": "2020-04-10",
+    "public": true,
+    "country": "AR",
+    "uuid": "e2b2b68f-c976-45c1-80b5-41c6b9a0cfec",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Second Day of Passover",
+    "date": "2020-04-10",
+    "observed": "2020-04-10",
+    "public": false,
+    "country": "AR",
+    "uuid": "da6c9fed-5225-449a-8a15-285e4f57a82c",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Third Day of Passover",
+    "date": "2020-04-11",
+    "observed": "2020-04-11",
+    "public": false,
+    "country": "AR",
+    "uuid": "6db8f6c7-1117-40dd-af98-bb984bcd79e0",
+    "weekday": {
+    "date": {
+    "name": "Saturday",
+    "numeric": "6"
+    },
+    "observed": {
+    "name": "Saturday",
+    "numeric": "6"
+    }
+    }
+    },
+    {
+    "name": "Easter",
+    "date": "2020-04-12",
+    "observed": "2020-04-12",
+    "public": true,
+    "country": "AR",
+    "uuid": "1983329a-cc5c-46c6-8184-935e395772d0",
+    "weekday": {
+    "date": {
+    "name": "Sunday",
+    "numeric": "7"
+    },
+    "observed": {
+    "name": "Sunday",
+    "numeric": "7"
+    }
+    }
+    },
+    {
+    "name": "Fourth Day of Passover",
+    "date": "2020-04-12",
+    "observed": "2020-04-12",
+    "public": false,
+    "country": "AR",
+    "uuid": "a1773859-5701-4e11-90bb-cd56a5ca5ae0",
+    "weekday": {
+    "date": {
+    "name": "Sunday",
+    "numeric": "7"
+    },
+    "observed": {
+    "name": "Sunday",
+    "numeric": "7"
+    }
+    }
+    },
+    {
+    "name": "Fifth Day of Passover",
+    "date": "2020-04-13",
+    "observed": "2020-04-13",
+    "public": false,
+    "country": "AR",
+    "uuid": "c368abd9-ce2f-4d91-a6d5-60e58c8487a7",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Sixth Day of Passover",
+    "date": "2020-04-14",
+    "observed": "2020-04-14",
+    "public": false,
+    "country": "AR",
+    "uuid": "6c5c7541-1907-4fb5-8d81-02031164d3dc",
+    "weekday": {
+    "date": {
+    "name": "Tuesday",
+    "numeric": "2"
+    },
+    "observed": {
+    "name": "Tuesday",
+    "numeric": "2"
+    }
+    }
+    },
+    {
+    "name": "Seventh Day of Passover",
+    "date": "2020-04-15",
+    "observed": "2020-04-15",
+    "public": false,
+    "country": "AR",
+    "uuid": "19a74fea-723e-4d38-9daa-8028650e2615",
+    "weekday": {
+    "date": {
+    "name": "Wednesday",
+    "numeric": "3"
+    },
+    "observed": {
+    "name": "Wednesday",
+    "numeric": "3"
+    }
+    }
+    },
+    {
+    "name": "Last Day of Passover",
+    "date": "2020-04-16",
+    "observed": "2020-04-16",
+    "public": false,
+    "country": "AR",
+    "uuid": "e5475112-a385-4c2d-b604-93ddf2c0d131",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Day of Action for Tolerance and Respect among Peoples",
+    "date": "2020-04-24",
+    "observed": "2020-04-24",
+    "public": false,
+    "country": "AR",
+    "uuid": "d8e7c293-46fa-427f-919e-7d3d63e4a634",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Labor Day",
+    "date": "2020-05-01",
+    "observed": "2020-05-01",
+    "public": true,
+    "country": "AR",
+    "uuid": "9ecd15e3-c424-4be0-9c4c-39519b58dc7c",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Festival of Breaking the Fast",
+    "date": "2020-05-23",
+    "observed": "2020-05-23",
+    "public": false,
+    "country": "AR",
+    "uuid": "d2158aaa-eb44-4eb2-baf5-783d1c6a9442",
+    "weekday": {
+    "date": {
+    "name": "Saturday",
+    "numeric": "6"
+    },
+    "observed": {
+    "name": "Saturday",
+    "numeric": "6"
+    }
+    }
+    },
+    {
+    "name": "May Revolution",
+    "date": "2020-05-25",
+    "observed": "2020-05-25",
+    "public": true,
+    "country": "AR",
+    "uuid": "41457051-13df-4e52-9ac1-26f8d5b69953",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Anniversary of the Passing of General Martín Miguel de Güemes",
+    "date": "2020-06-17",
+    "observed": "2020-06-15",
+    "public": true,
+    "country": "AR",
+    "uuid": "4f340646-3a1a-445b-a8f2-16d80b750b8f",
+    "weekday": {
+    "date": {
+    "name": "Wednesday",
+    "numeric": "3"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "General Manuel Belgrano Memorial Day",
+    "date": "2020-06-20",
+    "observed": "2020-06-20",
+    "public": true,
+    "country": "AR",
+    "uuid": "c370ba67-cc94-4dbd-8fc3-759642d990fd",
+    "weekday": {
+    "date": {
+    "name": "Saturday",
+    "numeric": "6"
+    },
+    "observed": {
+    "name": "Saturday",
+    "numeric": "6"
+    }
+    }
+    },
+    {
+    "name": "June Solstice",
+    "date": "2020-06-20",
+    "observed": "2020-06-20",
+    "public": false,
+    "country": "AR",
+    "uuid": "fe602eda-ceef-4666-a72c-fbb858d6c020",
+    "weekday": {
+    "date": {
+    "name": "Saturday",
+    "numeric": "6"
+    },
+    "observed": {
+    "name": "Saturday",
+    "numeric": "6"
+    }
+    }
+    },
+    {
+    "name": "Father's Day",
+    "date": "2020-06-21",
+    "observed": "2020-06-21",
+    "public": false,
+    "country": "AR",
+    "uuid": "30d6ef25-c3e2-467c-bf3c-9eadf7349dd0",
+    "weekday": {
+    "date": {
+    "name": "Sunday",
+    "numeric": "7"
+    },
+    "observed": {
+    "name": "Sunday",
+    "numeric": "7"
+    }
+    }
+    },
+    {
+    "name": "Independence Day",
+    "date": "2020-07-09",
+    "observed": "2020-07-09",
+    "public": true,
+    "country": "AR",
+    "uuid": "6ec01bf4-36f8-4ab9-8a06-4954a8b1977d",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Day after Independence Day",
+    "date": "2020-07-10",
+    "observed": "2020-07-10",
+    "public": true,
+    "country": "AR",
+    "uuid": "42797137-61a6-4c52-8d43-95b8e6fa4392",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Feast of the Sacrifice",
+    "date": "2020-07-30",
+    "observed": "2020-07-30",
+    "public": false,
+    "country": "AR",
+    "uuid": "f0b49f92-9f84-4cbd-9653-651fcff75e6f",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "General José de San Martín Memorial Day",
+    "date": "2020-08-17",
+    "observed": "2020-08-17",
+    "public": true,
+    "country": "AR",
+    "uuid": "876b17f3-0041-411f-aad2-0bc12366e0d1",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Islamic New Year's Day",
+    "date": "2020-08-19",
+    "observed": "2020-08-19",
+    "public": false,
+    "country": "AR",
+    "uuid": "3838cffd-4555-4d5c-a06e-c4e5e2458263",
+    "weekday": {
+    "date": {
+    "name": "Wednesday",
+    "numeric": "3"
+    },
+    "observed": {
+    "name": "Wednesday",
+    "numeric": "3"
+    }
+    }
+    },
+    {
+    "name": "Jewish New Year's Eve",
+    "date": "2020-09-18",
+    "observed": "2020-09-18",
+    "public": false,
+    "country": "AR",
+    "uuid": "f48dbe29-50ca-479c-9bc7-f71e4dae9d60",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "Jewish New Year's Day",
+    "date": "2020-09-19",
+    "observed": "2020-09-19",
+    "public": false,
+    "country": "AR",
+    "uuid": "93b4076c-cbfb-42fe-9174-dbac4f0bad70",
+    "weekday": {
+    "date": {
+    "name": "Saturday",
+    "numeric": "6"
+    },
+    "observed": {
+    "name": "Saturday",
+    "numeric": "6"
+    }
+    }
+    },
+    {
+    "name": "Second Day of the Jewish New Year",
+    "date": "2020-09-20",
+    "observed": "2020-09-20",
+    "public": false,
+    "country": "AR",
+    "uuid": "ac0c5f42-37ff-4c7f-a1f9-4e14a507b1f4",
+    "weekday": {
+    "date": {
+    "name": "Sunday",
+    "numeric": "7"
+    },
+    "observed": {
+    "name": "Sunday",
+    "numeric": "7"
+    }
+    }
+    },
+    {
+    "name": "September Equinox",
+    "date": "2020-09-22",
+    "observed": "2020-09-22",
+    "public": false,
+    "country": "AR",
+    "uuid": "33ce1f9c-4913-42d6-b085-d6e13bd62eb6",
+    "weekday": {
+    "date": {
+    "name": "Tuesday",
+    "numeric": "2"
+    },
+    "observed": {
+    "name": "Tuesday",
+    "numeric": "2"
+    }
+    }
+    },
+    {
+    "name": "Day of Atonement",
+    "date": "2020-09-28",
+    "observed": "2020-09-28",
+    "public": false,
+    "country": "AR",
+    "uuid": "d0207dcc-e859-49a6-8000-09ab9567926a",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Day of Respect for Cultural Diversity",
+    "date": "2020-10-12",
+    "observed": "2020-10-12",
+    "public": true,
+    "country": "AR",
+    "uuid": "804b3547-f456-4d97-bb42-ca693f8f7bf9",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Mother's Day",
+    "date": "2020-10-18",
+    "observed": "2020-10-18",
+    "public": false,
+    "country": "AR",
+    "uuid": "584f0ad2-b3bc-4e7d-9e02-e4a61867192a",
+    "weekday": {
+    "date": {
+    "name": "Sunday",
+    "numeric": "7"
+    },
+    "observed": {
+    "name": "Sunday",
+    "numeric": "7"
+    }
+    }
+    },
+    {
+    "name": "National Sovereignty Day",
+    "date": "2020-11-20",
+    "observed": "2020-11-23",
+    "public": true,
+    "country": "AR",
+    "uuid": "c67caaf6-d382-4669-a20d-c9ba9168671e",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Feast of the Immaculate Conception Bridge Holiday",
+    "date": "2020-12-07",
+    "observed": "2020-12-07",
+    "public": true,
+    "country": "AR",
+    "uuid": "d2939a5b-c11e-478f-9f45-42fa68e4a6de",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Feast of the Immaculate Conception",
+    "date": "2020-12-08",
+    "observed": "2020-12-08",
+    "public": true,
+    "country": "AR",
+    "uuid": "a510cdb9-a880-480c-a15c-6ebbd55d6ac3",
+    "weekday": {
+    "date": {
+    "name": "Tuesday",
+    "numeric": "2"
+    },
+    "observed": {
+    "name": "Tuesday",
+    "numeric": "2"
+    }
+    }
+    },
+    {
+    "name": "December Solstice",
+    "date": "2020-12-21",
+    "observed": "2020-12-21",
+    "public": false,
+    "country": "AR",
+    "uuid": "3b6a1df4-44f8-4ec6-907e-ce4085038111",
+    "weekday": {
+    "date": {
+    "name": "Monday",
+    "numeric": "1"
+    },
+    "observed": {
+    "name": "Monday",
+    "numeric": "1"
+    }
+    }
+    },
+    {
+    "name": "Christmas Eve",
+    "date": "2020-12-24",
+    "observed": "2020-12-24",
+    "public": false,
+    "country": "AR",
+    "uuid": "f6ba9c66-eda1-4292-af2d-f78b6350a193",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    },
+    {
+    "name": "Christmas Day",
+    "date": "2020-12-25",
+    "observed": "2020-12-25",
+    "public": true,
+    "country": "AR",
+    "uuid": "937bd940-191d-4f59-9d30-32c6d3419887",
+    "weekday": {
+    "date": {
+    "name": "Friday",
+    "numeric": "5"
+    },
+    "observed": {
+    "name": "Friday",
+    "numeric": "5"
+    }
+    }
+    },
+    {
+    "name": "New Year's Eve",
+    "date": "2020-12-31",
+    "observed": "2020-12-31",
+    "public": false,
+    "country": "AR",
+    "uuid": "6c84b3b8-2b34-450a-b3ac-8349d604a107",
+    "weekday": {
+    "date": {
+    "name": "Thursday",
+    "numeric": "4"
+    },
+    "observed": {
+    "name": "Thursday",
+    "numeric": "4"
+    }
+    }
+    }
+    ]
+    }

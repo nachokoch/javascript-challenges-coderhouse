@@ -1,3 +1,24 @@
+//Declaramos la url que vamos a usar para el GET
+const URLGET ="data/datos.json"
+//Agregamos un botón con jQuery
+$("body").append('<div class="container mt-3"><button class="btn btn-secondary" id="btn1">Click para averiguar los feriados</button></div>');
+//Escuchamos el evento click del botón agregado
+$("#btn1").click(() => {
+    $.getJSON(URLGET, function (respuesta, estado) {
+        if(estado === "success"){
+        let misDatos = respuesta.holidays;
+        for (const dato of misDatos) {
+        $("body").append(`<div>
+        <h3>${dato.name}</h3>
+        <p> ${dato.date}</p>
+        </div>`)
+       
+            }
+        }
+    });
+});
+
+
 // Ready el DOM
 
 $(() => {
@@ -36,47 +57,9 @@ class Alumno {
 
 // FUNCIONES
 
-
-const procesarAlumnos = ( obj )=> {
-    let mejorPromedio = 0;
-    let alumnoMejorPromedio = "Nadie"
-    console.log(`Se detectaron ${obj.cantidadAlumnos} de alumnos en el curso, cada uno con ${obj.examenes} examenes tomados.`)
-    if(obj.comenzada === false){
-        console.log("No se puede realizar el procesamiento ya que la clase no ha comenzado (Clase.comenzada === false)")
-    }else{
-        for (let i = 0; i < obj.cantidadAlumnos; i++) {   
-            let nombreDelAlumno = prompt(`Ingrese el nombre del alumno. `)             
-            let acumulador = 0;  
-            let promedio = 0;      
-            for (let y = 0; y < obj.examenes ; y++)   {
-                let nota = parseFloat(prompt(`Ingrese la nota del examen`));
-                acumulador = acumulador + nota;
-                promedio = sacarPromedio (acumulador, obj.examenes); 
-                if(promedio > mejorPromedio) {
-                    mejorPromedio = promedio;
-                    alumnoMejorPromedio = nombreDelAlumno;
-                }
-
-            }
-            const alumno = new Alumno (nombreDelAlumno, promedio)
-            listaAlumnos.push(alumno)            
-            console.log(`El promedio de ${alumno.nombre} es de ${alumno.promedio}`)            
-        }
-        console.log(listaAlumnos)
-        anunciarMejorAlumno(alumnoMejorPromedio, mejorPromedio)
-        
-
-    }
-   
-    
-    
-}
-
-const imprimirAlumnos = () => {
-    for (let alumno of listaAlumnos) {
-$('body').append(`<p><b>Alumno</b>: ${alumno.nombre}</p>
-<p><b>Promedio</b>: ${alumno.promedio}</p>`); 
-}
+const imprimirAlumnos = (listaAlumnos) => {    
+$('body').append(`<div class="container mt-3"><p><b>Alumno</b>: ${listaAlumnos[0].nombre}</p>
+<p><b>Promedio</b>: ${listaAlumnos[0].promedio}</p></div>`)
 }
 
 
@@ -93,28 +76,70 @@ const validarFormulario = (e) => {
 
     let examenesPorAlumno = formulario.find('input[name="ExamenesPorAlumno"]').val();
     
-    let clase = new Clase (cantidadDeAlumnos, examenesPorAlumno, camada, nombreProfesor) 
+    clase = new Clase (cantidadDeAlumnos, examenesPorAlumno, camada, nombreProfesor) 
     
     clase.comenzarClase()
 
-    printear(clase)
+    mostrarInformacionCamada(clase)
 
-    let botonProceso = $("#procesar-alumnos")
+    let botonProceso = $("#procesar-alumnos")  
 
     botonProceso.on("click", function(){
-        procesarAlumnos(clase)
-        imprimirAlumnos();
+        // procesarAlumnos(clase)
+        $("body").append(`<div class="container mt-3" id="contenedorProcesado">
+        <form id="formulario-alumnos">
+        <div class ="form-group">
+            <label>Nombre del Alumno</label>
+            <input type="text" name="NombreDelAlumno" class="form-control" placeholder="Nombre del alumno.">
+        </div>
+        </form>`         
+        )
+        for(let index = 0; index < examenesPorAlumno; index++) {
+            $("#formulario-alumnos").append(`<div class ="form-group">
+            <label>Calificacion ${index+1}</label>
+            <input type="number"  name="calificacion-${index}" class="form-control" placeholder="Calificacion.">
+            <small class="form-text text-muted">Ingrese el numero sin puntos ni guiones.</small>
+            </div>        
+            `)
+        }
+        $("#formulario-alumnos").append(`<input type="submit" value="Cargar Alumno" class="btn btn-primary mt-3 mr-3" id="botonAgregarAlumno" form="formulario-alumnos"></input></form>`)    
+        $("#contenedorProcesado").append(`<button class="btn btn-primary mt-3" id="botonInforme">Generar Informe</button>`)           
+        $("#formulario-alumnos").on('submit',function(e){
+            e.preventDefault()
+            agregarAlumno(clase)
+            alert("Alumno y promedio creado.")
+        })
         
-    })
-   
+    })  
+    }
+    
+    
+
+
+
+
+const agregarAlumno = (clase) => {    
+    let acumulado = 0;
+    let formularioAlumnos = $('#formulario-alumnos')
+    let nombreDelAlumno = formularioAlumnos.find('input[name="NombreDelAlumno"]').val();
+    for (let index = 0; index < clase.examenes; index++) {
+        let nota = parseInt(formularioAlumnos.find(`input[name="calificacion-${index}"]`).val());        
+        acumulado = acumulado + nota;
+    }
+    let promedio = (acumulado/clase.examenes)
+    const alumno = new Alumno (nombreDelAlumno, promedio)
+    listaAlumnos.unshift(alumno)     
+    imprimirAlumnos(listaAlumnos);
 }
 
-const printear = (clase) => {    
-        $("body").append(`<div><h2>Profesor: ${clase.profesorTitular}</h2>
+
+
+const mostrarInformacionCamada = (clase) => {    
+        $("body").append(`<div class="container mt-3" id="informacionCamada"><p><b>Profesor:</b> ${clase.profesorTitular}</p>
         <p><b>Camada</b>: ${clase.camada}</p>
         <p><b>Cantidad de Alumnos</b>: ${clase.cantidadAlumnos}</p>
         <p><b>Cantidad de Examenes Por Alumno</b>: ${clase.examenes}</p>
-        <button id="procesar-alumnos"> Comenzar el procesado de alumnos</button></div>`);          
+        <button id="procesar-alumnos" class="btn btn-primary"> Comenzar el procesado de alumnos</button></div>`);          
 }
 
 let formulario = $("#formulario-clase");
@@ -124,7 +149,11 @@ formulario.on("submit", function(e){
     validarFormulario();
 });
 
-let formularioProceso = $("#formulario-proceso")
+
+$(document).on('click',"#botonInforme", function() { 
+     anunciarMejorAlumno(listaAlumnos)
+    
+})
 
 
 // PROMEDIO - Funcion auxiliar de procesarAlumnos
@@ -135,27 +164,25 @@ const sacarPromedio = (acumulador, examenes ) => {
 
 // ANUNCIO MEJOR ALUMNO - Funcion auxiliar de procesarAlumnos
 
-const anunciarMejorAlumno = (alumno, promedio) => {
-    $('body').append(`<h3>El alumno con el mejor promedio es ${alumno} con ${promedio}</h3>`)
+const anunciarMejorAlumno = (alumnos) => {
+    ordenarListaAlumnos(alumnos)
+    $('#contenedorProcesado').append(`<div class="container mt-3"><h3>El alumno con el mejor promedio es ${alumnos[0].nombre} con ${alumnos[0].promedio}</h3></div>`)
 }
 
 // ORDENAR ARRAY POR PROMEDIOS DE MENOR A MAYOR
 
 const ordenarListaAlumnos = (alumnos) => {
-    alumnos.sort((a, b) => parseFloat(a.promedio) - parseFloat(b.promedio));
+    alumnos.sort((a, b) => parseFloat(b.promedio) - parseFloat(a.promedio));
 }
 
 
-// MOSTRAR TODOS LOS ALUMNOS Y SUS CALIFICACIONES.
-
-const mostrarAlumnos = (alumnos) => {
-    console.log(`Listado de alumnos y sus respectivos promedios, de menor a mayor: ${JSON.stringify(alumnos)}`)
-}
 
 
-// CREACION DE ARRAY 
+// CREACION DE ARRAY DE ALUMNOS
 
 let listaAlumnos = [];
+
+// ANIMACIONES
 
 $('#header').fadeIn("slow", ()=>{
     $('#formulario-clase').slideDown("slow")
