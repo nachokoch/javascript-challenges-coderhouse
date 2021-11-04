@@ -1,5 +1,3 @@
-
-
 // LLAMADA PARA SABER LOS FERIADOS DEL ANIO. //
 const URLGET ="data/datos.json"
 $("body").append('<div class="container mt-3"><button class="btn btn-secondary" id="btn1">Click para averiguar los feriados</button></div>');
@@ -8,11 +6,10 @@ $("#btn1").click(() => {
         if(estado === "success"){
         let misDatos = respuesta.holidays;
         for (const dato of misDatos) {
-        $("body").append(`<div class="container mt-5">
+        $("body").append(`<div class="container mt-5" id="asd">
         <h3>${dato.name}</h3>
         <p> ${dato.date}</p>
-        </div>`)
-       
+        </div>`)       
             }
         }
     });
@@ -66,7 +63,7 @@ $('body').append(`<div class="container mt-3"><p><b>Alumno</b>: ${listaAlumnos[0
 
 const validarFormulario = (e) => {    
    
-    alert("Clase Creada");
+    
    
     let nombreProfesor = formulario.find('input[name="ProfesorTitular"]').val();    
     
@@ -107,18 +104,20 @@ const validarFormulario = (e) => {
             `)
         }
         $("#formulario-alumnos").append(`<input type="submit" value="Cargar Alumno" class="btn btn-primary mt-3 mr-3" id="botonAgregarAlumno" form="formulario-alumnos"></input></form>`)    
-        $("#contenedorProcesado").append(`<button class="btn btn-primary mt-3" id="botonInforme">Generar Informe</button>`)           
+        $("#contenedorProcesado").append(`<button class="btn btn-primary mt-3" id="botonInforme">Mejor Promedio</button>`)           
         $("#formulario-alumnos").on('submit',function(e){
             e.preventDefault()
-            agregarAlumno(clase)
-            alert("Alumno y promedio creado.")
+            agregarAlumno(clase)            
         })
         
     })  
-    }
-    
-    
+    }    
 
+// MOSTRAR MODAL DE ALUMNO CREADO.
+    
+$(document).on('click', '#botonAgregarAlumno', function(){
+    $('#exampleModal').modal('show')
+})
 
 // CREACION DE ALUMNO Y AGREGADO AL ARRAY DE LISTA DE ALUMNOS.
 
@@ -153,7 +152,7 @@ let formulario = $("#formulario-clase");
 
 formulario.on("submit", function(e){
     e.preventDefault();
-    validarFormulario();
+    validarFormulario();        
 });
 
 
@@ -194,6 +193,7 @@ let listaAlumnos = [];
 $('#header').fadeIn("slow", ()=>{
     $('#formulario-clase').slideDown("slow")
 });
+
 
 
 
