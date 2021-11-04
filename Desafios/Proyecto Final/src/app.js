@@ -1,14 +1,14 @@
-//Declaramos la url que vamos a usar para el GET
+
+
+// LLAMADA PARA SABER LOS FERIADOS DEL ANIO. //
 const URLGET ="data/datos.json"
-//Agregamos un botón con jQuery
 $("body").append('<div class="container mt-3"><button class="btn btn-secondary" id="btn1">Click para averiguar los feriados</button></div>');
-//Escuchamos el evento click del botón agregado
 $("#btn1").click(() => {
     $.getJSON(URLGET, function (respuesta, estado) {
         if(estado === "success"){
         let misDatos = respuesta.holidays;
         for (const dato of misDatos) {
-        $("body").append(`<div>
+        $("body").append(`<div class="container mt-5">
         <h3>${dato.name}</h3>
         <p> ${dato.date}</p>
         </div>`)
@@ -19,15 +19,15 @@ $("#btn1").click(() => {
 });
 
 
-// Ready el DOM
+// PONER EN READY EL DOM. //
 
 $(() => {
     console.log('El DOM esta listo');
    });
 
-// CLASES
+// CLASES //
 
-// CLASE "CLASE" 
+// CLASE "CLASE" //
 
 class Clase {
 
@@ -46,7 +46,7 @@ class Clase {
 
 }
 
-// CLASE "ALUMNO"
+// CLASE "ALUMNO" //
 
 class Alumno {
     constructor (nombre, promedio) {
@@ -55,14 +55,14 @@ class Alumno {
     }
 }
 
-// FUNCIONES
+// FUNCIONES //
 
 const imprimirAlumnos = (listaAlumnos) => {    
 $('body').append(`<div class="container mt-3"><p><b>Alumno</b>: ${listaAlumnos[0].nombre}</p>
 <p><b>Promedio</b>: ${listaAlumnos[0].promedio}</p></div>`)
 }
 
-
+// VALIDACION DE FORMULARIO + OBTENCION DE DATOS.
 
 const validarFormulario = (e) => {    
    
@@ -84,8 +84,9 @@ const validarFormulario = (e) => {
 
     let botonProceso = $("#procesar-alumnos")  
 
-    botonProceso.on("click", function(){
-        // procesarAlumnos(clase)
+    // CREACION DE FORMULARIO PARA ALUMNOS
+
+    botonProceso.on("click", function(){        
         $("body").append(`<div class="container mt-3" id="contenedorProcesado">
         <form id="formulario-alumnos">
         <div class ="form-group">
@@ -94,6 +95,9 @@ const validarFormulario = (e) => {
         </div>
         </form>`         
         )
+
+        // LOOP PARA LA CREACION DE INPUTS DE MANERA DINAMICA.
+
         for(let index = 0; index < examenesPorAlumno; index++) {
             $("#formulario-alumnos").append(`<div class ="form-group">
             <label>Calificacion ${index+1}</label>
@@ -116,7 +120,7 @@ const validarFormulario = (e) => {
     
 
 
-
+// CREACION DE ALUMNO Y AGREGADO AL ARRAY DE LISTA DE ALUMNOS.
 
 const agregarAlumno = (clase) => {    
     let acumulado = 0;
@@ -132,7 +136,7 @@ const agregarAlumno = (clase) => {
     imprimirAlumnos(listaAlumnos);
 }
 
-
+// CREACION DEL DIV QUE CONTIENE LA INFORMACION DE LA CLASE.
 
 const mostrarInformacionCamada = (clase) => {    
         $("body").append(`<div class="container mt-3" id="informacionCamada"><p><b>Profesor:</b> ${clase.profesorTitular}</p>
@@ -142,6 +146,9 @@ const mostrarInformacionCamada = (clase) => {
         <button id="procesar-alumnos" class="btn btn-primary"> Comenzar el procesado de alumnos</button></div>`);          
 }
 
+
+// SELECTOR DE FORMULARIO Y SUBMIT.
+
 let formulario = $("#formulario-clase");
 
 formulario.on("submit", function(e){
@@ -149,6 +156,9 @@ formulario.on("submit", function(e){
     validarFormulario();
 });
 
+
+
+// FUNCION PARA ANUNCIAR Y CREAR EL DIV DEL MEJOR PROMEDIO.
 
 $(document).on('click',"#botonInforme", function() { 
      anunciarMejorAlumno(listaAlumnos)
@@ -174,9 +184,6 @@ const anunciarMejorAlumno = (alumnos) => {
 const ordenarListaAlumnos = (alumnos) => {
     alumnos.sort((a, b) => parseFloat(b.promedio) - parseFloat(a.promedio));
 }
-
-
-
 
 // CREACION DE ARRAY DE ALUMNOS
 
